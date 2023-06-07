@@ -1,4 +1,4 @@
-name: codiff
+name: gr
 channels:
   - pytorch
   - defaults
