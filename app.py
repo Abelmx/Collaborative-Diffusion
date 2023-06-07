@@ -1,5 +1,5 @@
-import os
+import subprocess
 
-os.system("sh install_conda.sh")
-os.system("sh install_env.sh")
-os.system("conda activate codiff && python server.py")
+subprocess.call(["bash", "install_conda.sh"])
+subprocess.call(["bash", "install_env.sh"])
+subprocess.call(["bash", "conda activate codiff && python server.py"])

@@ -15,11 +15,7 @@ def gen_image(image_path, text):
 if __name__ == "__main__":
     title = """<h1 align="center">Collaborative Diffusion (CVPR 2023)</h1>"""
 
-    theme = gr.themes.Soft(
-        primary_hue="zinc",
-        secondary_hue="green",
-        neutral_hue="green",
-        text_size=gr.themes.sizes.text_lg)
+    theme = gr.themes.Soft()
 
     with gr.Blocks(
             css="""#col_container { margin-left: auto; margin-right: auto;}""",
