@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo ". $HOME/miniconda/etc/profile.d/conda.sh" >> $HOME/.bashrc
+source $HOME/.bashrc >> /dev/null
+conda init bash
+
 conda env create -f environment.yaml
 conda activate codiff
 
@@ -11,6 +15,7 @@ directory="pretrained"
 
 if [ ! -d "$directory" ]; then
     mkdir "$directory"
+fi
 
 wget https://download.openxlab.org.cn/models/abel-9512/codiff/weight/512_codiff_mask_text -O ./pretrained/512_codiff_mask_text.ckpt
 wget https://download.openxlab.org.cn/models/abel-9512/codiff/weight/512_mask -O ./pretrained/512_mask.ckpt
